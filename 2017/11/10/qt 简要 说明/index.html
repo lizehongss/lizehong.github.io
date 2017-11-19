@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="qt 文件操作简要说明文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）   1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFi">
+<meta name="description" content="文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）  1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFile flies(&amp;qu">
 <meta name="keywords" content="qt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="qt 文件操作简要说明">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/qt 简要 说明/index.html">
 <meta property="og:site_name" content="lizehong">
-<meta property="og:description" content="qt 文件操作简要说明文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）   1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFi">
-<meta property="og:updated_time" content="2017-11-10T16:26:15.958Z">
+<meta property="og:description" content="文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）  1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFile flies(&amp;qu">
+<meta property="og:updated_time" content="2017-11-19T16:00:18.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qt 文件操作简要说明">
-<meta name="twitter:description" content="qt 文件操作简要说明文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）   1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFi">
+<meta name="twitter:description" content="文件格式 文件格式主要采用txt和xml格式  其中txt文件存放从外部传入的数据  xml存放原始数据 txt文件操作 使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）  1234//---打开文件并读取文件内容     QFile files(&amp;quot;data.txt&amp;quot;);     //绝对路径，测试成功，采用下面代码   //QFile flies(&amp;qu">
 
 
 
@@ -404,12 +404,10 @@
       
 
       
-        <h1 id="qt-文件操作简要说明"><a href="#qt-文件操作简要说明" class="headerlink" title="qt 文件操作简要说明"></a>qt 文件操作简要说明</h1><h2 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2><blockquote>
-<p>文件格式主要采用txt和xml格式<br>  其中txt文件存放从外部传入的数据<br>  xml存放原始数据</p>
-<h2 id="txt文件操作"><a href="#txt文件操作" class="headerlink" title="txt文件操作"></a>txt文件操作</h2><ol>
+        <h1 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h1><p> 文件格式主要采用txt和xml格式<br>  其中txt文件存放从外部传入的数据<br>  xml存放原始数据</p>
+<h1 id="txt文件操作"><a href="#txt文件操作" class="headerlink" title="txt文件操作"></a>txt文件操作</h1><ol>
 <li>使用QFile类打开txt文件（注意采用绝对路径时要使用两个“//”）</li>
 </ol>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//---打开文件并读取文件内容</div><div class="line">     QFile files(&quot;data.txt&quot;);</div><div class="line">     //绝对路径，测试成功，采用下面代码</div><div class="line">   //QFile flies(&quot;//hotstar//scan_date//date.text&quot;)</div></pre></td></tr></table></figure>
 <p>2.使用QList类来提取txt文件的内容并采用正则将原始数据进行处理代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">QTextStream textStream(&amp;files);</div><div class="line">         QRegExp rx(&quot;(\\d&#123;13&#125;)&quot;);</div><div class="line"></div><div class="line">         while (!textStream.atEnd())</div><div class="line">         &#123;</div><div class="line">             rx.indexIn(textStream.readLine());</div><div class="line">             lists&lt;&lt;rx.cap(1);</div><div class="line"></div><div class="line">         &#125;</div></pre></td></tr></table></figure></p>
 <p>3.采用Qxml类对xml数据进行处理并与上述中的lists列表进行比较并处理输出(注意qt使用xml时，需要在.pro文件中添加 QT +=xml否则无法运行)</p>
@@ -508,8 +506,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/12/CSS布局/" rel="prev" title="css布局">
-                css布局 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/12/CSS布局/" rel="prev" title="css布局（持续更新）">
+                css布局（持续更新） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -650,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#qt-文件操作简要说明"><span class="nav-number">1.</span> <span class="nav-text">qt 文件操作简要说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件格式"><span class="nav-number">1.1.</span> <span class="nav-text">文件格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#txt文件操作"><span class="nav-number">1.2.</span> <span class="nav-text">txt文件操作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件格式"><span class="nav-number">1.</span> <span class="nav-text">文件格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#txt文件操作"><span class="nav-number">2.</span> <span class="nav-text">txt文件操作</span></a></li></ol></div>
             
 
           </div>

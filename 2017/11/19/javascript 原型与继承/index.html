@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
+<meta name="description" content="前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.age= name;	o.job=">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript 原型与继承">
 <meta property="og:url" content="http://yoursite.com/2017/11/19/javascript 原型与继承/index.html">
 <meta property="og:site_name" content="lizehong">
-<meta property="og:description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
-<meta property="og:updated_time" content="2017-11-19T15:54:10.553Z">
+<meta property="og:description" content="前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.age= name;	o.job=">
+<meta property="og:updated_time" content="2017-11-19T16:00:01.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 原型与继承">
-<meta name="twitter:description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
+<meta name="twitter:description" content="前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.age= name;	o.job=">
 
 
 
@@ -404,8 +404,8 @@
       
 
       
-        <h1 id="javascript-原型与继承"><a href="#javascript-原型与继承" class="headerlink" title="javascript 原型与继承"></a>javascript 原型与继承</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧）</p>
-<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><p>主要的模式如下</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧）</p>
+<h1 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h1><p>主要的模式如下</p>
 <ul>
 <li>工厂模式  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> function createPerson(name,age,job)&#123;</div><div class="line">	var o =new Object();</div><div class="line">	o.name=name;</div><div class="line">	o.age= name;</div><div class="line">	o.job=job;</div><div class="line">	o.sayName = function()&#123;</div><div class="line">		console.log(this.name);</div><div class="line">	&#125;</div><div class="line">	return o;</div><div class="line">&#125;</div><div class="line">var person1=createPerson(&quot;Nicholas&quot;,29, &quot;Sofeware Engineer&quot;);</div><div class="line">var person2=createPerson(&quot;lizehong&quot;, &quot;Doctor&quot;);</div></pre></td></tr></table></figure>
 </li>
@@ -416,7 +416,7 @@
 </li>
 </ul>
 <p><strong>construct</strong>为构造函数属性，指向Person;<br>person1和person2的同名函数是不相等的<br>可通过原型函数解决这个问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(person1.sayName==person2.sayName);//false</div></pre></td></tr></table></figure></p>
-<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><h3 id="what-is-原型"><a href="#what-is-原型" class="headerlink" title="what is 原型"></a>what is 原型</h3><p>当创建一个函数时，会同时创建一个prototype属性，这个属性指向函数的原型对象。而原型对象都会自动获得一个constructor属性，指向prototypen属性所在的函数的指针比如:<br><strong>Person.prototype.constructor指向Person</strong> 当调用构造函数创建一个新的实例时，该实例包含一个指针，指向构造函数的原型对象可称为[[Prototype]],可通过isPrototypeOf()方法来确定对象是否存在这种关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(Person.prototype.isPrototypeOf(person1);</div><div class="line">console.log(Person.prototype,isPrototypeOf(person2);</div></pre></td></tr></table></figure></p>
+<h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><h2 id="what-is-原型"><a href="#what-is-原型" class="headerlink" title="what is 原型"></a>what is 原型</h2><p>当创建一个函数时，会同时创建一个prototype属性，这个属性指向函数的原型对象。而原型对象都会自动获得一个constructor属性，指向prototypen属性所在的函数的指针比如:<br><strong>Person.prototype.constructor指向Person</strong> 当调用构造函数创建一个新的实例时，该实例包含一个指针，指向构造函数的原型对象可称为[[Prototype]],可通过isPrototypeOf()方法来确定对象是否存在这种关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(Person.prototype.isPrototypeOf(person1);</div><div class="line">console.log(Person.prototype,isPrototypeOf(person2);</div></pre></td></tr></table></figure></p>
 <p>…..有待更新</p>
 
       
@@ -460,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/12/CSS布局/" rel="next" title="css布局">
-                <i class="fa fa-chevron-left"></i> css布局
+              <a href="/2017/11/12/CSS布局/" rel="next" title="css布局（持续更新）">
+                <i class="fa fa-chevron-left"></i> css布局（持续更新）
               </a>
             
           </div>
@@ -608,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-原型与继承"><span class="nav-number">1.</span> <span class="nav-text">javascript 原型与继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象"><span class="nav-number">2.1.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型模式"><span class="nav-number">2.2.</span> <span class="nav-text">原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-is-原型"><span class="nav-number">2.2.1.</span> <span class="nav-text">what is 原型</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建对象"><span class="nav-number">2.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原型模式"><span class="nav-number">3.</span> <span class="nav-text">原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-原型"><span class="nav-number">3.1.</span> <span class="nav-text">what is 原型</span></a></li></ol></li></ol></div>
             
 
           </div>

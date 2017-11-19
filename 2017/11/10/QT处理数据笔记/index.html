@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="QT简要笔记表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;">
+<meta name="description" content="表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;setTex">
 <meta name="keywords" content="qt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QT简要笔记">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/QT处理数据笔记/index.html">
 <meta property="og:site_name" content="lizehong">
-<meta property="og:description" content="QT简要笔记表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;">
-<meta property="og:updated_time" content="2017-11-10T16:26:13.810Z">
+<meta property="og:description" content="表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;setTex">
+<meta property="og:updated_time" content="2017-11-19T16:01:10.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QT简要笔记">
-<meta name="twitter:description" content="QT简要笔记表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;">
+<meta name="twitter:description" content="表格简要说明 (1) 表格行数和列数123ui-&amp;gt;tableWidget-&amp;gt;setColumnCount(5);ui-&amp;gt;tableWidget-&amp;gt;setRowCount(5)//五行五列     (2)添加表格内容1234QTableWidgetItem *item_maxo = new QTableWidgetItem();//表格item_maxo-&amp;gt;setTex">
 
 
 
@@ -404,7 +404,7 @@
       
 
       
-        <h1 id="QT简要笔记"><a href="#QT简要笔记" class="headerlink" title="QT简要笔记"></a>QT简要笔记</h1><h2 id="表格简要说明"><a href="#表格简要说明" class="headerlink" title="表格简要说明"></a>表格简要说明</h2><ul>
+        <h1 id="表格简要说明"><a href="#表格简要说明" class="headerlink" title="表格简要说明"></a>表格简要说明</h1><ul>
 <li>(1) 表格行数和列数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ui-&gt;tableWidget-&gt;setColumnCount(5);</div><div class="line">ui-&gt;tableWidget-&gt;setRowCount(5)</div><div class="line">//五行五列</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -419,7 +419,7 @@
 </li>
 </ul>
 <hr>
-<h2 id="QT窗口切换"><a href="#QT窗口切换" class="headerlink" title="QT窗口切换"></a>QT窗口切换</h2><ul>
+<h1 id="QT窗口切换"><a href="#QT窗口切换" class="headerlink" title="QT窗口切换"></a>QT窗口切换</h1><ul>
 <li>(1) 主窗口为QWidget ,子窗口为QDialog, 通过click信号新建<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Dialog dlg //新建窗口</div><div class="line">if(dlgs.exec()==QDialog::Accepted)show();//如果窗口返回类型为exec显示</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -433,7 +433,7 @@
 <li>通过不隐藏主窗口，将主窗口与子窗口设为等高与等宽，然后将子窗口关闭</li>
 </ul>
 <hr>
-<h2 id="QT注意事项"><a href="#QT注意事项" class="headerlink" title="QT注意事项"></a>QT注意事项</h2><ul>
+<h1 id="QT注意事项"><a href="#QT注意事项" class="headerlink" title="QT注意事项"></a>QT注意事项</h1><ul>
 <li>1 自定义信号，尽量不用使用ui界面的信号，方便修改信号的属性与类型</li>
 <li>2 尽量使用releas,不用使用debug</li>
 <li>3 类型定义最后要清理</li>
@@ -628,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#QT简要笔记"><span class="nav-number">1.</span> <span class="nav-text">QT简要笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格简要说明"><span class="nav-number">1.1.</span> <span class="nav-text">表格简要说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QT窗口切换"><span class="nav-number">1.2.</span> <span class="nav-text">QT窗口切换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QT注意事项"><span class="nav-number">1.3.</span> <span class="nav-text">QT注意事项</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#表格简要说明"><span class="nav-number">1.</span> <span class="nav-text">表格简要说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QT窗口切换"><span class="nav-number">2.</span> <span class="nav-text">QT窗口切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#QT注意事项"><span class="nav-number">3.</span> <span class="nav-text">QT注意事项</span></a></li></ol></div>
             
 
           </div>
