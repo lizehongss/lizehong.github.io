@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css," />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="css布局（持续更新）将浮动元素围住 为父元素添加  overflow:hidden 属性演示如下：  同时浮动父元素 为父元素添加float:left演示如下：  添加非浮动元素的清除元素 代码如下 1234567.clear:after&amp;#123;    content:&amp;quot;.&amp;quot;;    display:block;    height:0;    visibility:hi">
-<meta name="keywords" content="css">
+<meta name="description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css布局">
-<meta property="og:url" content="http://yoursite.com/2017/11/12/CSS布局/index.html">
+<meta property="og:title" content="javascript 原型与继承">
+<meta property="og:url" content="http://yoursite.com/2017/11/19/javascript 原型与继承/index.html">
 <meta property="og:site_name" content="lizehong">
-<meta property="og:description" content="css布局（持续更新）将浮动元素围住 为父元素添加  overflow:hidden 属性演示如下：  同时浮动父元素 为父元素添加float:left演示如下：  添加非浮动元素的清除元素 代码如下 1234567.clear:after&amp;#123;    content:&amp;quot;.&amp;quot;;    display:block;    height:0;    visibility:hi">
-<meta property="og:updated_time" content="2017-11-12T13:47:43.000Z">
+<meta property="og:description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
+<meta property="og:updated_time" content="2017-11-19T15:54:10.553Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css布局">
-<meta name="twitter:description" content="css布局（持续更新）将浮动元素围住 为父元素添加  overflow:hidden 属性演示如下：  同时浮动父元素 为父元素添加float:left演示如下：  添加非浮动元素的清除元素 代码如下 1234567.clear:after&amp;#123;    content:&amp;quot;.&amp;quot;;    display:block;    height:0;    visibility:hi">
+<meta name="twitter:title" content="javascript 原型与继承">
+<meta name="twitter:description" content="javascript 原型与继承前言  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧） 创建对象主要的模式如下  工厂模式  123456789101112 function createPerson(name,age,job)&amp;#123;	var o =new Object();	o.name=name;	o.a">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/12/CSS布局/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/19/javascript 原型与继承/"/>
 
 
 
 
 
-  <title>css布局 | lizehong</title>
+  <title>javascript 原型与继承 | lizehong</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -311,7 +311,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/CSS布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/javascript 原型与继承/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lizehong">
@@ -332,7 +332,7 @@
             
             
               
-                css布局
+                javascript 原型与继承
               
             
           </h1>
@@ -347,8 +347,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T21:45:04+08:00">
-                2017-11-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-19T23:51:48+08:00">
+                2017-11-19
               </time>
             
 
@@ -370,8 +370,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
                   </a>
                 </span>
 
@@ -404,46 +404,20 @@
       
 
       
-        <h1 id="css布局（持续更新）"><a href="#css布局（持续更新）" class="headerlink" title="css布局（持续更新）"></a>css布局（持续更新）</h1><h2 id="将浮动元素围住"><a href="#将浮动元素围住" class="headerlink" title="将浮动元素围住"></a>将浮动元素围住</h2><ol>
-<li><p>为父元素添加  <strong>overflow:hidden</strong> 属性演示如下：</p>
-</li>
-<li><p>同时浮动父元素 <strong>为父元素添加float:left</strong>演示如下：</p>
-</li>
-<li><p>添加非浮动元素的清除元素 代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clear:after&#123;</div><div class="line">    content:&quot;.&quot;;</div><div class="line">    display:block;</div><div class="line">    height:0;</div><div class="line">    visibility:hidden;</div><div class="line">    clear:both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="三栏一固定宽度布局"><a href="#三栏一固定宽度布局" class="headerlink" title="三栏一固定宽度布局"></a>三栏一固定宽度布局</h2><ol>
-<li><p>父元素wrapper 设定一固定宽度，水平外边距为auto</p>
-</li>
-<li><p>子元素nav和artice设置浮动，宽度相加为wrapper的宽度（再加以此类推）</p>
-</li>
-<li><p>header和footer 默认与布局同宽 <strong>footer要清除浮动</strong></p>
-</li>
-</ol>
+        <h1 id="javascript-原型与继承"><a href="#javascript-原型与继承" class="headerlink" title="javascript 原型与继承"></a>javascript 原型与继承</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  把高程的相关部分又看了一部分，所以整理一下笔记…..题外话：做了一天课设想吐，果然自己不想搞硬件，好好做前端吧（看看写不写的完吧）</p>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><p>主要的模式如下</p>
 <ul>
-<li>各栏边界分开的解决方法：<ol>
-<li>为子元素里的内容加一个div,为div设置一个内边距</li>
-<li>为浮动栏设置 <strong>box-sizing:border-box</strong> 以及内边距和边框即可–  <strong>IE7和IE8不支持</strong> </li>
-</ol>
+<li>工厂模式  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> function createPerson(name,age,job)&#123;</div><div class="line">	var o =new Object();</div><div class="line">	o.name=name;</div><div class="line">	o.age= name;</div><div class="line">	o.job=job;</div><div class="line">	o.sayName = function()&#123;</div><div class="line">		console.log(this.name);</div><div class="line">	&#125;</div><div class="line">	return o;</div><div class="line">&#125;</div><div class="line">var person1=createPerson(&quot;Nicholas&quot;,29, &quot;Sofeware Engineer&quot;);</div><div class="line">var person2=createPerson(&quot;lizehong&quot;, &quot;Doctor&quot;);</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="三栏–中栏流动布局"><a href="#三栏–中栏流动布局" class="headerlink" title="三栏–中栏流动布局"></a>三栏–中栏流动布局</h2><ul>
-<li>方法一</li>
-</ul>
-<ol>
-<li>用一个div class为threecolarap 包围全部三栏并为其设置浮动</li>
-<li>用一个div class为twocolarap包围左栏和中栏并为其设置浮动以及加上 <strong>margin-right:210px</strong> 把右栏拉到区块外边距腾出的位置上</li>
-<li>中栏加上 <strong>margin-right:210px</strong> 在流动居中的栏右测腾出空间</li>
-</ol>
+<p>没有解决对象识别问题(怎么知道一个对象的类型)</p>
 <ul>
-<li>方法二</li>
+<li>构造函数模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,job)&#123;</div><div class="line">	this.name=name;</div><div class="line">	this.age=age;</div><div class="line">	this.job=job;</div><div class="line">	this.sayName = function()&#123;</div><div class="line">		console.log(this.name);</div><div class="line">	&#125;;</div><div class="line">&#125;</div><div class="line">var person1 = new Person(&quot;Nicholas&quot;,29,&quot;Software Engineer&quot;);</div><div class="line">var person2 = new Person(&quot;Greg&quot;,27,&quot;Doctor&quot;);</div><div class="line">console.log(person1.constructor == Person); //true</div><div class="line">console.log(person2.constructor==Person); //true</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol>
-<li>为每一栏display属性设定为table-cell (<strong>IE7不支持</strong>)<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><h3 id="元素居中"><a href="#元素居中" class="headerlink" title="元素居中"></a>元素居中</h3></li>
-<li>为父元素应用 <strong>text-algin:center</strong> </li>
-<li>为要居中的元素设定 <strong>display:inline-block</strong></li>
-</ol>
+<p><strong>construct</strong>为构造函数属性，指向Person;<br>person1和person2的同名函数是不相等的<br>可通过原型函数解决这个问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(person1.sayName==person2.sayName);//false</div></pre></td></tr></table></figure></p>
+<h2 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h2><h3 id="what-is-原型"><a href="#what-is-原型" class="headerlink" title="what is 原型"></a>what is 原型</h3><p>当创建一个函数时，会同时创建一个prototype属性，这个属性指向函数的原型对象。而原型对象都会自动获得一个constructor属性，指向prototypen属性所在的函数的指针比如:<br><strong>Person.prototype.constructor指向Person</strong> 当调用构造函数创建一个新的实例时，该实例包含一个指针，指向构造函数的原型对象可称为[[Prototype]],可通过isPrototypeOf()方法来确定对象是否存在这种关系<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">console.log(Person.prototype.isPrototypeOf(person1);</div><div class="line">console.log(Person.prototype,isPrototypeOf(person2);</div></pre></td></tr></table></figure></p>
+<p>…..有待更新</p>
 
       
     </div>
@@ -473,7 +447,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"># css</a>
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
           
         </div>
       
@@ -486,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/10/qt 简要 说明/" rel="next" title="qt 文件操作简要说明">
-                <i class="fa fa-chevron-left"></i> qt 文件操作简要说明
+              <a href="/2017/11/12/CSS布局/" rel="next" title="css布局">
+                <i class="fa fa-chevron-left"></i> css布局
               </a>
             
           </div>
@@ -495,10 +469,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/19/javascript 原型与继承/" rel="prev" title="javascript 原型与继承">
-                javascript 原型与继承 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#css布局（持续更新）"><span class="nav-number">1.</span> <span class="nav-text">css布局（持续更新）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将浮动元素围住"><span class="nav-number">1.1.</span> <span class="nav-text">将浮动元素围住</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三栏一固定宽度布局"><span class="nav-number">1.2.</span> <span class="nav-text">三栏一固定宽度布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三栏–中栏流动布局"><span class="nav-number">1.3.</span> <span class="nav-text">三栏–中栏流动布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">1.4.</span> <span class="nav-text">补充</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元素居中"><span class="nav-number">1.4.1.</span> <span class="nav-text">元素居中</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript-原型与继承"><span class="nav-number">1.</span> <span class="nav-text">javascript 原型与继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象"><span class="nav-number">2.1.</span> <span class="nav-text">创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型模式"><span class="nav-number">2.2.</span> <span class="nav-text">原型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-is-原型"><span class="nav-number">2.2.1.</span> <span class="nav-text">what is 原型</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
