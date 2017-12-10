@@ -98,8 +98,10 @@
 <meta property="og:site_name" content="lizehong">
 <meta property="og:description" content="前言整理相关的css布局，当作总结和笔记，会把遇到的都写在这里，应该不会再写在其它地方了;会一直更新下去;^()^ 将浮动元素围住 为父元素添加  overflow:hidden 属性演示如下：  同时浮动父元素 为父元素添加float:left演示如下：  添加非浮动元素的清除元素 代码如下 1234567.clear:after&amp;#123;    content:&amp;quot;.&amp;quot;;">
 <meta property="og:image" content="http://p02qqh4vs.bkt.clouddn.com/css_4.PNG">
+<meta property="og:image" content="http://p02qqh4vs.bkt.clouddn.com/css_1.PNG">
+<meta property="og:image" content="http://p02qqh4vs.bkt.clouddn.com/css_2.PNG">
 <meta property="og:image" content="http://p02qqh4vs.bkt.clouddn.com/css_3.PNG">
-<meta property="og:updated_time" content="2017-11-27T12:09:25.715Z">
+<meta property="og:updated_time" content="2017-11-29T11:26:51.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css布局（ 2017.11.27更新）">
 <meta name="twitter:description" content="前言整理相关的css布局，当作总结和笔记，会把遇到的都写在这里，应该不会再写在其它地方了;会一直更新下去;^()^ 将浮动元素围住 为父元素添加  overflow:hidden 属性演示如下：  同时浮动父元素 为父元素添加float:left演示如下：  添加非浮动元素的清除元素 代码如下 1234567.clear:after&amp;#123;    content:&amp;quot;.&amp;quot;;">
@@ -430,7 +432,8 @@
 </li>
 </ol>
 <p>css代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#wrapper&#123;</div><div class="line">  margin: 0 auto;</div><div class="line">  width:960px;</div><div class="line">  height:700px;&#125;</div><div class="line">header&#123;</div><div class="line">  background:#dcd9c0;</div><div class="line">  height:30px;&#125;</div><div class="line">nav&#123;</div><div class="line">  width:150px;</div><div class="line">  float:left;</div><div class="line">  background:#dcd9c0;</div><div class="line">  height:400px;&#125;</div><div class="line">  article&#123;</div><div class="line">  width:600px;</div><div class="line">  float:left;</div><div class="line">  background:#ffed53;</div><div class="line">  height:400px;&#125;</div><div class="line">aside&#123;</div><div class="line">  width:210px;</div><div class="line">  float:left;</div><div class="line">  background:#3f7ccf;  </div><div class="line">  height:400px;&#125;</div><div class="line">footer&#123;</div><div class="line">  clear:both;</div><div class="line">  background:#000;</div><div class="line">  height:40px;&#125;</div></pre></td></tr></table></figure></p>
-<p>效果如下：<br>！<a href="http://p02qqh4vs.bkt.clouddn.com/css_1.PNG" target="_blank" rel="external">图片不见了^()^</a></p>
+<p>效果如下：</p>
+<p><img src="http://p02qqh4vs.bkt.clouddn.com/css_1.PNG" alt="图片不见了^()^"></p>
 <ul>
 <li>各栏边界分开的解决方法：<ol>
 <li>为子元素里的内容加一个div,为div设置一个内边距</li>
@@ -444,11 +447,12 @@
 <ol>
 <li>用一个div class为threecolarap 包围全部三栏并为其设置浮动</li>
 <li>用一个div class为twocolarap包围左栏和中栏并为其设置浮动以及加上 <strong>margin-right:210px</strong> 把右栏拉到区块外边距腾出的位置上</li>
-<li>中栏加上 <strong>margin-right:210px</strong> 在流动居中的栏右测腾出空间<br>html代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;main_wrapper&quot;&gt;</div><div class="line">&lt;header&gt;&lt;/header&gt;</div><div class="line">&lt;div id=&quot;threecolwrap&quot;&gt;/三栏外包装（包围全部三栏）*/</div><div class="line">&lt;div id=&quot;twocolwrap&quot;&gt;</div><div class="line">&lt;nav&gt;&lt;/nav&gt;/*左栏*/</div><div class="line">&lt;article&gt;&lt;/article&gt;/*中栏*/</div><div class="line">&lt;/div&gt;/*两栏外包装（包围左栏和中栏）*/</div><div class="line">&lt;aside&gt;&lt;/aside&gt;/*右栏*/</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;footer&gt;</div><div class="line">&lt;/footer&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
+<li>中栏加上 <strong>margin-right:210px</strong> 在流动居中的栏右测腾出空间<br>html代码如下：</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;main_wrapper&quot;&gt;</div><div class="line">&lt;header&gt;&lt;/header&gt;</div><div class="line">&lt;div id=&quot;threecolwrap&quot;&gt;/三栏外包装（包围全部三栏）*/</div><div class="line">&lt;div id=&quot;twocolwrap&quot;&gt;</div><div class="line">&lt;nav&gt;&lt;/nav&gt;/*左栏*/</div><div class="line">&lt;article&gt;&lt;/article&gt;/*中栏*/</div><div class="line">&lt;/div&gt;/*两栏外包装（包围左栏和中栏）*/</div><div class="line">&lt;aside&gt;&lt;/aside&gt;/*右栏*/</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;footer&gt;</div><div class="line">&lt;/footer&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>css代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">div#threecolwrap&#123;</div><div class="line">	float:left;//浮动强制它包围浮动的栏</div><div class="line">	width:100%;</div><div class="line">&#125;</div><div class="line">div#twocolwrap&#123;</div><div class="line">	float:left;//浮动强制它包围浮动的栏</div><div class="line">	width:100%;</div><div class="line">	margin-right:-210px;//右栏拉到区块外边距腾出的位置上</div><div class="line">&#125;</div><div class="line">article&#123;</div><div class="line">	margin-left:150px;//在流动居中的栏右栏腾出空间</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>效果如下：<br>！<a href="http://p02qqh4vs.bkt.clouddn.com/css_2.PNG" target="_blank" rel="external">图片不见了^()^</a></p>
+<p>效果如下：</p>
+<p><img src="http://p02qqh4vs.bkt.clouddn.com/css_2.PNG" alt="图片不见了^()^"></p>
 <ul>
 <li>方法二</li>
 </ul>
@@ -457,7 +461,8 @@
 </li>
 </ol>
 <p>css代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">nav&#123;</div><div class="line">	display:table-cell;</div><div class="line">	width:150px;</div><div class="line">	padding:10px;</div><div class="line">	background:#dc9c0;</div><div class="line"></div><div class="line">&#125;</div><div class="line">article&#123;</div><div class="line">	display:table-cell;</div><div class="line">	padding:10px 20px;</div><div class="line">	background:#ffed53;</div><div class="line">&#125;</div><div class="line">aside&#123;</div><div class="line">	display:table-cell;</div><div class="line">	width:210px;</div><div class="line">	padding:10px;</div><div class="line">	background:#3f7ccf;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>效果如下：<br><img src="http://p02qqh4vs.bkt.clouddn.com/css_3.PNG" alt="图片不见了^()^"></p>
+<p>效果如下：</p>
+<p><img src="http://p02qqh4vs.bkt.clouddn.com/css_3.PNG" alt="图片不见了^()^"></p>
 <h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><h2 id="元素居中"><a href="#元素居中" class="headerlink" title="元素居中"></a>元素居中</h2><ol>
 <li>为父元素应用 <strong>text-algin:center</strong> </li>
 <li>为要居中的元素设定 <strong>display:inline-block</strong></li>
@@ -588,7 +593,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -610,7 +615,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
