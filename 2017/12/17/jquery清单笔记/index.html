@@ -1,0 +1,834 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="jquery," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前言做了差不多一个星期的jquery清单，将所学到的内容整理成笔记，在床上纠结要写这个还是canvas做网页背景，结果还是这个。将有关思路和代码整理如下： html结构html代码如下：1234567891011121314151617181920&amp;lt;div class=&amp;quot;msg&amp;quot;&amp;gt;		&amp;lt;span class=&amp;quot;msg-content&amp;quot;&amp;gt">
+<meta name="keywords" content="jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery清单笔记">
+<meta property="og:url" content="http://yoursite.com/2017/12/17/jquery清单笔记/index.html">
+<meta property="og:site_name" content="lizehong">
+<meta property="og:description" content="前言做了差不多一个星期的jquery清单，将所学到的内容整理成笔记，在床上纠结要写这个还是canvas做网页背景，结果还是这个。将有关思路和代码整理如下： html结构html代码如下：1234567891011121314151617181920&amp;lt;div class=&amp;quot;msg&amp;quot;&amp;gt;		&amp;lt;span class=&amp;quot;msg-content&amp;quot;&amp;gt">
+<meta property="og:updated_time" content="2017-12-17T06:01:56.812Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery清单笔记">
+<meta name="twitter:description" content="前言做了差不多一个星期的jquery清单，将所学到的内容整理成笔记，在床上纠结要写这个还是canvas做网页背景，结果还是这个。将有关思路和代码整理如下： html结构html代码如下：1234567891011121314151617181920&amp;lt;div class=&amp;quot;msg&amp;quot;&amp;gt;		&amp;lt;span class=&amp;quot;msg-content&amp;quot;&amp;gt">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '5USQCZK2QG',
+      apiKey: '3ad4285d9087d894d90760ce017e1cee',
+      indexName: 'index',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/17/jquery清单笔记/"/>
+
+
+
+
+
+  <title>jquery清单笔记 | lizehong</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">lizehong</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">TRY IT AND DO IT</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/17/jquery清单笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lizehong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lizehong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jquery清单笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-17T11:04:25+08:00">
+                2017-12-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jquery/" itemprop="url" rel="index">
+                    <span itemprop="name">jquery</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>做了差不多一个星期的jquery清单，将所学到的内容整理成笔记，在床上纠结要写这个还是canvas做网页背景，结果还是这个。将有关思路和代码整理如下：</p>
+<h1 id="html结构"><a href="#html结构" class="headerlink" title="html结构"></a>html结构</h1><p>html代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;msg&quot;&gt;</div><div class="line">		&lt;span class=&quot;msg-content&quot;&gt;&lt;/span&gt;</div><div class="line">		&lt;span class=&quot;anchor confirmed&quot;&gt;ok&lt;/span&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line"></div><div class="line">	&lt;div class=&quot;container&quot;&gt;</div><div class="line">		&lt;h1&gt;jquery清单&lt;/h1&gt;</div><div class="line">		&lt;div class=&quot;add-task&quot;&gt;</div><div class="line">			&lt;form&gt;</div><div class="line">			&lt;input type=&quot;text&quot; name=&quot;content&quot; placeholder=&quot;hellow&quot; autofocus autocomplete=&quot;off&quot;&gt;</div><div class="line">			&lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;submit&lt;/button&gt;</div><div class="line">		&lt;/form&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;task-list&quot;&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;task-detail-mask&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;task-detail&quot;&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;video src=&quot;&quot; class=&quot;alerter&quot;&gt;&lt;/video&gt;</div></pre></td></tr></table></figure></p>
+<p>其中msg为到时后提醒内容，add-task存放输入框和按钮表单，task-list为清单内容。task-detail-mask为详细框的遮罩，task-detail为详细框</p>
+<h1 id="css样式"><a href="#css样式" class="headerlink" title="css样式"></a>css样式</h1><p>引用如下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>将浏览器的默认样式清除。其它样式主要按照自己的想法构建，具体可看附录源码</p>
+<h1 id="js实现功能"><a href="#js实现功能" class="headerlink" title="js实现功能"></a>js实现功能</h1><p> 首先，各变量定义如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var $form_add_task=$(&apos;.add-task&apos;),//获取输入的class</div><div class="line">	task_list=&#123;&#125;,//存放数据</div><div class="line">	$delail_task,//获取delail类,渲染html后再获得</div><div class="line">	$delete_task,//获取delete类,渲染html后再获得</div><div class="line">	$task_detail=$(&apos;.task-detail&apos;),//获取详情类</div><div class="line">	$task_detail_masks=$(&apos;.task-detail-mask&apos;)//获取详细的遮罩</div><div class="line">	current_index,</div><div class="line">	$upate_form,</div><div class="line">	$task_detail_content,</div><div class="line">	$task_detail_content_input,</div><div class="line">	$checkbox_complete,</div><div class="line">	$msg=$(&apos;.msg&apos;),</div><div class="line">	$msg_content=$msg.find(&apos;.msg-content&apos;),</div><div class="line">	$msg_confirm=$msg.find(&apos;.confirmed&apos;),</div><div class="line">	$alerter=$(&apos;.alerter&apos;),</div><div class="line">	$body=$(&apos;body&apos;),</div><div class="line">	$window=$(window)</div><div class="line">	;</div></pre></td></tr></table></figure>
+<ol>
+<li>将输入的内容存储，这里使用了<a href="https://github.com/marcuswestin/store.js" target="_blank" rel="external">store.js</a>来存放，主要使用它的<br><strong> store.set() </strong> 来存放数据。<br>代码如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">//提交表单时触发事件</div><div class="line">$form_add_task.on(&apos;submit&apos;,function(e)&#123;</div><div class="line">		var new_task=&#123;&#125;;</div><div class="line">		e.preventDefault();/*禁用default*/</div><div class="line">		var $input=$(this).find(&apos;input[name=content]&apos;);</div><div class="line">		new_task.content = $input.val();</div><div class="line">		if(!new_task.content) return;</div><div class="line">		/*存放Task*/</div><div class="line">		if(add_task(new_task))&#123;</div><div class="line">			$input.val(null);//将输入框内容清除</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">//将数据存入task_list</div><div class="line">function add_task(new_task)&#123;</div><div class="line">			/*将taskpush入task_list*/</div><div class="line">			task_list.push(new_task);</div><div class="line">			refresh_task_list();</div><div class="line">			return true;</div><div class="line">		&#125;</div><div class="line">//存放数据在store并渲染html</div><div class="line">function refresh_task_list()&#123;</div><div class="line">			store.set(&apos;task_list&apos;,task_list);</div><div class="line">			render_task_list();</div><div class="line"></div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>将表单内容渲染在task-list上<br>主要是render_task_list()和render_task_tpl()来实现</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">/*渲染task-lis，传入数据和数据索引*/</div><div class="line">    function render_task_tpl(data,index)&#123;</div><div class="line">       	if(!data||!index) return;//不存在返回</div><div class="line">       	var list_item_tpl=</div><div class="line">	       &apos;&lt;div class=&quot;task-item&quot; data-index=&quot;&apos;+ index+&apos;&quot;&gt;&apos;+</div><div class="line">	       &apos;&lt;span&gt;&lt;input class=&quot;complete&quot;&apos;+(data.complete ? &apos;checked&apos;:&apos;&apos;)+&apos; type=&quot;checkbox&quot;&gt;&lt;/span&gt;&apos;+</div><div class="line">	       &apos;&lt;span class=&quot;task-content&quot;&gt;&apos;+data.content+&apos;&lt;/span&gt;&apos;+</div><div class="line">	           &apos;&lt;span class=&quot;fc&quot;&gt;&apos;+</div><div class="line">	          &apos;&lt;span class=&quot;action delete&quot;&gt;删除 &lt;/span&gt;&apos;+</div><div class="line">	        &apos;&lt;span class=&quot;action detail&quot;&gt; 详细 &lt;/span&gt;&apos;+</div><div class="line">	       &apos;&lt;span&gt;&apos;+</div><div class="line">	        &apos;&lt;/div&gt;&apos;</div><div class="line">	return $(list_item_tpl);</div><div class="line">       &#125;</div><div class="line"> //数据依次渲染，并绑定删除和详细事件</div><div class="line">function render_task_list()&#123;</div><div class="line">       	var $task_list=$(&apos;.task-list&apos;);</div><div class="line">       	$task_list.html(&apos;&apos;);</div><div class="line">       	var complete_items=[];</div><div class="line">       	//将已经完成的和还没完成的分开渲染</div><div class="line">       	for(var i=0;i&lt;task_list.length;i++)&#123;</div><div class="line">       			var item=task_list[i];</div><div class="line">       		if(item&amp;&amp;item.complete)</div><div class="line">			complete_items[i]=item;</div><div class="line">			else</div><div class="line">       		var $task=render_task_tpl(task_list[i],i);</div><div class="line">       		$task_list.prepend($task);</div><div class="line">       	&#125;</div><div class="line">       	for(var j=0;j&lt;complete_items.length;j++)&#123;</div><div class="line">       	     $task=render_task_tpl(complete_items[j],j);</div><div class="line">       		 if(!$task) continue;</div><div class="line">       		 //完成的添加completed类，方便添加完成样式</div><div class="line">       		 $task.addClass(&quot;completed&quot;);</div><div class="line">       		 $task_list.append($task);</div><div class="line">       	&#125;</div><div class="line"></div><div class="line">       		$delete_task=$(&apos;.action.delete&apos;);/*获取delete类*/</div><div class="line">       		$delail_task=$(&apos;.action.detail&apos;);//获取detail类</div><div class="line">       		$checkbox_complete=$(&apos;.complete&apos;);</div><div class="line">       		list_task_delete();/*删除事件*/</div><div class="line">       		listion_task_detail();//详情事件</div><div class="line">       		listen_checkbox_complete();//勾选事件</div><div class="line">       &#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>渲染详情</li>
+</ol>
+<p>当用户点击详情或双击list时显示详情内容<br>listion_task_detail()事件如下：点击或双击时触发show_task_detail函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function listion_task_detail()&#123;</div><div class="line">  		var index;</div><div class="line">   	$(&apos;.task-item&apos;).on(&apos;dblclick&apos;,function()&#123;</div><div class="line">   		index=$(this).data(&apos;index&apos;);//获得索引</div><div class="line">   		show_task_detail(index);//显示内容</div><div class="line">   	&#125;)</div><div class="line">   	$delail_task.on(&apos;click&apos;,function()&#123;</div><div class="line">   		var $this=$(this);</div><div class="line">   		var $item=$this.parent().parent();//获得索引</div><div class="line">   		 index=$item.data(&apos;index&apos;);</div><div class="line">   		show_task_detail(index);//显示内容</div><div class="line">   	&#125;)</div><div class="line"></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>show_task_detail()和render_task_detail()函数如下：,其中日期使用了<a href="https://github.com/xdan/datetimepicker" target="_blank" rel="external">datetimepicker.js</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"> function show_task_detail(index)&#123;</div><div class="line">    	render_task_detail(index);</div><div class="line">    	current_index=index;</div><div class="line">    	$task_detail.show();</div><div class="line">    	$task_detail_masks.show();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">//渲染详情的html界面</div><div class="line">  function render_task_detail(index)&#123;</div><div class="line">    	if(index===undefined||!task_list[index])</div><div class="line">    		return;</div><div class="line">    	var item=task_list[index];</div><div class="line">    	var tpl=&apos;&lt;form&gt;&apos;+</div><div class="line">			&apos;&lt;div class=&quot;content&quot;&gt;&apos;+</div><div class="line">			item.content+</div><div class="line">			&apos;&lt;/div&gt;&apos;+</div><div class="line">			&apos;&lt;div&gt;&lt;input style=&quot;display:none&quot;  type=&quot;text&quot; name=&quot;content&quot; value=&quot;&apos;+item.content+&apos;&quot;&gt;&lt;/div&gt;&apos;+</div><div class="line">			&apos;&lt;div&gt;&apos;+</div><div class="line">			&apos;&lt;div class=&quot;desc&quot;&gt;&apos;+</div><div class="line">			&apos;&lt;textarea name=&quot;desc&quot; &gt;&apos;+(item.desc||&apos;&apos;)+&apos;&lt;/textarea&gt;&apos;+</div><div class="line">			&apos;&lt;/div&gt;&apos;+</div><div class="line">		    &apos;&lt;/div&gt;&apos;+</div><div class="line">		    &apos;&lt;div class=&quot;remind&quot;&gt;&apos;+&apos;&lt;label&gt;提醒时间&lt;/label&gt;&apos;+</div><div class="line">			&apos;&lt;input class=&quot;datetime&quot; type=&quot;text&quot; value=&quot;&apos;+(item.remain_data||&quot;&quot;)+&apos;&quot; name=&quot;remind_date&quot;&gt;&apos;+</div><div class="line">		    &apos;&lt;/div&gt;&apos;+</div><div class="line">		    &apos;&lt;div&gt;&lt;button type=&quot;submit&quot;&gt;更新&lt;/button&gt;&lt;/div&gt;&apos;+</div><div class="line">		    &apos;&lt;/form&gt;&apos;;</div><div class="line">		    $task_detail.html(null);</div><div class="line">		    $task_detail.html(tpl);</div><div class="line">		    //调用datetimepicker.js</div><div class="line">		    $(&quot;.datetime&quot;).datetimepicker();</div><div class="line">		    $upate_form=$task_detail.find(&apos;form&apos;);//获取更新的表单</div><div class="line">		    $task_detail_content=$upate_form.find(&apos;.content&apos;);</div><div class="line">		    $task_detail_content_input=$upate_form.find(&apos;[name=content]&apos;);</div><div class="line">		    //双击更改content内容</div><div class="line">		    $task_detail_content.on(&apos;dblclick&apos;,function()&#123;</div><div class="line">		    	$task_detail_content_input.show();</div><div class="line">		    	$task_detail_content.hide();</div><div class="line">		    &#125;)</div><div class="line">		    //表单提交的事件</div><div class="line">		    $upate_form.on(&apos;submit&apos;,function(e)&#123;</div><div class="line">		    	e.preventDefault();</div><div class="line">		    	var data=&#123;&#125;;</div><div class="line">		    	//更新数据</div><div class="line">		    	data.content = $(this).find(&apos;[name=content]&apos;).val();</div><div class="line">		    	data.desc=$(this).find(&apos;[name=desc]&apos;).val();</div><div class="line">		    	data.remain_data=$(this).find(&apos;[name=remind_date]&apos;).val();</div><div class="line">		    	//更新html</div><div class="line">		    	upate_task(index,data);</div><div class="line">		    	//隐藏详细</div><div class="line">		    	hidden_task_detail();</div><div class="line">		    &#125;)</div><div class="line">    &#125;</div><div class="line"> //隐藏函数</div><div class="line"> function hidden_task_detail()&#123;</div><div class="line">    	$task_detail.hide();</div><div class="line">    	$task_detail_masks.hide();</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>upate_task()函数代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function upate_task(index,data)&#123;</div><div class="line">	//不存在时返回</div><div class="line">    	if(!index||!task_list[index])</div><div class="line">    		return;</div><div class="line">    	task_list[index]=$.extend(&#123;&#125;,task_list[index],data);</div><div class="line">    	refresh_task_list();</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>删除事件</li>
+</ol>
+<p>删除使用了自定义的提示框pop(),listen_msg_event()代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function list_task_delete()&#123;</div><div class="line">	$delete_task.on(&apos;click&apos;,function()&#123;</div><div class="line">		var $this=$(this);</div><div class="line">		var $item=$this.parent().parent();//获取索引</div><div class="line">		var index=$item.data(&apos;index&apos;);</div><div class="line">		//y调用提示框和删除lisdt</div><div class="line">		pop(&quot;Are you sure?&quot;).then(function(r)&#123;</div><div class="line">			r? delete_task(index):null; </div><div class="line">	     &#125;)</div><div class="line">	    &#125;)</div><div class="line">        &#125;</div></pre></td></tr></table></figure></p>
+<p>pop()函数如下：使用了jquery的<a href="http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html" target="_blank" rel="external">Deferred</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div></pre></td><td class="code"><pre><div class="line">function pop(arg)&#123;</div><div class="line">	//arg为显示内容</div><div class="line">		if(!arg)&#123;</div><div class="line">			console.error(&apos;error&apos;);</div><div class="line">		&#125;</div><div class="line">		var conf=&#123;&#125;,$box,$mask,$title,$content,$confirm,$cancel,dfd,</div><div class="line">		confirmed,timer;</div><div class="line">	//判断arg为字符或对象</div><div class="line">		if(typeof arg==&apos;string&apos;)</div><div class="line">			conf.title=arg;</div><div class="line">		else &#123;</div><div class="line">			conf=$.extend(conf,arg);</div><div class="line">		&#125;</div><div class="line">	//调用Deferred();</div><div class="line">		dfd=$.Deferred();</div><div class="line">	//获得浏览器的宽度和高度，并应用在$box上	</div><div class="line">		function adjust_box_position()&#123;</div><div class="line">			var window_width=$window.width(),</div><div class="line">				window_height=$window.height(),</div><div class="line">				box_width=$box.width(),</div><div class="line">				box_height=$box.height(),</div><div class="line">				move_x,</div><div class="line">				move_y</div><div class="line">				;</div><div class="line">				move_x=(window_width-box_width)/2;</div><div class="line">				move_y=((window_height-box_height)/2)-30;</div><div class="line">				$box.css(&#123;</div><div class="line">					left:move_x,</div><div class="line">					top:move_y,</div><div class="line">				&#125;)</div><div class="line">		&#125;</div><div class="line">	//移除提示框</div><div class="line">		function dismiss_pop()&#123;</div><div class="line">			$mask.remove();</div><div class="line">			$box.remove();</div><div class="line">		&#125;</div><div class="line">	//$box的html和css</div><div class="line">		$box=$(&apos;&lt;div&gt;&apos;+&apos;&lt;div class=&quot;pop-title&quot;&gt;&apos;+conf.title+&apos;&lt;/div&gt;&apos;+</div><div class="line">				&apos;&lt;div class=&quot;pop-content&quot;&gt;&apos;+</div><div class="line">				&apos;&lt;div&gt;&lt;button style=&quot;margin-right:5px;&quot; class=&quot;primary confirm&quot;&gt;确定&lt;/button&gt;&apos;+</div><div class="line">				&apos;&lt;button class=&quot;cancel&quot;&gt;取消&lt;/button&gt;&lt;/div&gt;&apos;+</div><div class="line">				&apos;&lt;/div&gt;&apos;+</div><div class="line">			&apos;&lt;/div&gt;&apos;).css(&#123;</div><div class="line">			width:300,</div><div class="line">			height:200,</div><div class="line">			background: &apos;#fff&apos;,</div><div class="line">			position:&apos;fixed&apos;,</div><div class="line">			&apos;border-radius&apos;:3,</div><div class="line">			&apos;box-shadow&apos;:&apos;0 1px 2px rgba(0,0,0,.3)&apos;,</div><div class="line">			color:&apos;#444&apos;</div><div class="line"></div><div class="line">		&#125;)</div><div class="line">	//$mask的html和css	</div><div class="line">		$mask=$(&apos;&lt;div&gt;&lt;/div&gt;&apos;).css(&#123;</div><div class="line">			position:&apos;fixed&apos;,</div><div class="line">			background:&apos;rgba(0,0,0,0.4)&apos;,</div><div class="line">			top:0,</div><div class="line">			bottom:0,</div><div class="line">			left :0,</div><div class="line">			right :0,</div><div class="line"></div><div class="line">		&#125;)</div><div class="line">	//提示内容样式</div><div class="line">		$title=$box.find(&apos;.pop-title&apos;).css(&#123;</div><div class="line">			padding:&apos;5px 10px&apos;,</div><div class="line">			&apos;font-weight&apos;:900,</div><div class="line">			&apos;font-size&apos;:20,</div><div class="line">			&apos;text-align&apos;:&apos;center&apos;</div><div class="line"></div><div class="line">		&#125;)</div><div class="line">		$content =$box.find(&apos;.pop-content&apos;).css(&#123;</div><div class="line">			padding:&apos;5px 10px&apos;,</div><div class="line">			&apos;text-align&apos;:&apos;center&apos;</div><div class="line">		&#125;)</div><div class="line">		$confirm=$content.find(&apos;button.confirm&apos;);</div><div class="line">		$cancel=$content.find(&apos;button.cancel&apos;);</div><div class="line">	//不断等待用户点击，用户点击后停止</div><div class="line">		timer=setInterval(function()&#123;</div><div class="line">			if(confirmed!==undefined)&#123;</div><div class="line">			//将confirmed传入resolve方法</div><div class="line">				dfd.resolve(confirmed);</div><div class="line">			//停止setInterval</div><div class="line">				clearInterval(timer);</div><div class="line">				dismiss_pop();</div><div class="line">		&#125;</div><div class="line">				</div><div class="line">		&#125;,50)</div><div class="line">		//按钮点击事件</div><div class="line">		$confirm.on(&apos;click&apos;,function()&#123;</div><div class="line">			confirmed=true;</div><div class="line">		&#125;)</div><div class="line">		$cancel.on(&apos;click&apos;,function()&#123;</div><div class="line">			confirmed=false;</div><div class="line">		&#125;)</div><div class="line">		//mask点击事件</div><div class="line">		$mask.on(&apos;click&apos;,function()&#123;</div><div class="line">			confirmed=false;</div><div class="line"></div><div class="line">		&#125;)</div><div class="line">		//当调整浏览器窗口的大小时，发生 resize 事件。</div><div class="line">		$window.on(&apos;resize&apos;,function()&#123;</div><div class="line">			adjust_box_position();</div><div class="line">		&#125;)</div><div class="line">		//将$mask和$box添加到body</div><div class="line">		$mask.appendTo($body);</div><div class="line">		$box.appendTo($mask);</div><div class="line">		$window.resize();</div><div class="line">		//将promise返回</div><div class="line">		return dfd.promise();</div><div class="line">		</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>定时功能</li>
+</ol>
+<p>主要使用task_remind_check()函数实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">function task_remind_check()&#123;</div><div class="line">		var current_timestamp;</div><div class="line">		var itl =setInterval(function()&#123;</div><div class="line">			for(var i=0;i&lt;task_list.length;i++)&#123;</div><div class="line">			var item =task_list[i],task_timestamp;</div><div class="line">			//还没完成的进行判断</div><div class="line">			if(!item || !item.remain_data || item.informed)</div><div class="line">				continue;</div><div class="line">			current_timestamp = (new Date()).getTime();</div><div class="line">			//getTime() 方法可返回距 1970 年 1 月 1 日之间的毫秒数</div><div class="line">			task_timestamp=(new Date(item.remain_data)).getTime();</div><div class="line">			if(current_timestamp-task_timestamp&gt;=1)&#123;</div><div class="line">				//更新informed</div><div class="line">				upate_task(i,&#123;informed:true&#125;);</div><div class="line">				//显示提示</div><div class="line">				show_msg(item.content);</div><div class="line">			&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;,300);</div><div class="line">	&#125;</div><div class="line">//show_msg函数</div><div class="line">function show_msg(msg)&#123;</div><div class="line">		if(!msg) return;</div><div class="line">		$msg_content.html(msg);</div><div class="line">		//播放music</div><div class="line">		$alerter.get(0).play();</div><div class="line">		$msg.show();</div><div class="line">	&#125;</div><div class="line">function hide_msg(msg)&#123;</div><div class="line">		$msg.hide();</div><div class="line">	&#125;</div><div class="line">//显示后点击$msg_confirm事件</div><div class="line">function listen_msg_event()&#123;</div><div class="line">		$msg_confirm.on(&apos;click&apos;,function()&#123;</div><div class="line">			hide_msg();</div><div class="line">		&#125;)</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>将listen_msg_event()和task_remind_check()都注册到init()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function init()&#123;</div><div class="line">			task_list=store.get(&apos;task_list&apos;)||[];</div><div class="line">			listen_msg_event();</div><div class="line">			if(task_list.length)</div><div class="line">			render_task_list();</div><div class="line">			task_remind_check();</div><div class="line">		&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>勾选事件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function listen_checkbox_complete()&#123;</div><div class="line">    	$checkbox_complete.on(&apos;click&apos;,function()&#123;</div><div class="line">    	var $this=$(this);</div><div class="line">    	//获取索引</div><div class="line">    	var index=$this.parent().parent().data(&apos;index&apos;);</div><div class="line">    	 var item=store.get(&apos;task_list&apos;)[index];</div><div class="line">    	 //更新complete</div><div class="line">    	 if(item.complete)&#123;</div><div class="line">    	   upate_task(index,&#123;complete:false&#125;);</div><div class="line">	&#125;</div><div class="line">	else&#123;</div><div class="line">		upate_task(index,&#123;complete:true&#125;);</div><div class="line">	&#125;</div><div class="line">    	&#125;)</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><ul>
+<li><a href="https://lizehongss.github.io/demo_show/jquery%E5%BA%94%E7%94%A8/index.html" target="_blank" rel="external">展示地址</a></li>
+<li><a href="">源码地址</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/html5_canvas笔记/" rel="next" title="html_canvas笔记">
+                <i class="fa fa-chevron-left"></i> html_canvas笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="lizehong" />
+          <p class="site-author-name" itemprop="name">lizehong</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lizehongss" target="_blank" title="Github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Github
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html结构"><span class="nav-number">2.</span> <span class="nav-text">html结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css样式"><span class="nav-number">3.</span> <span class="nav-text">css样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#js实现功能"><span class="nav-number">4.</span> <span class="nav-text">js实现功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">5.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lizehong</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
