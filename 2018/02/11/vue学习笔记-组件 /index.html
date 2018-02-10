@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="前言学习vue的笔记，应该会试着写一个系列，目的还是加深印象，毕竟感觉自己的记忆力真的不ok,也是给自己的学习留下一点东西 创建vue实例和数据12345678var app = new Vue(&amp;#123;	el:&amp;apos;#app&amp;apos;，//指定挂载vue实例的元素，一般为id	data:&amp;#123;		//数据		a:1	&amp;#125;	&amp;#125;) 在html中使用来显示数据， 是">
+<meta name="description" content="前言主要是有关vue组件的笔记，然后也不想为了定blog而写blog,所以应该会写一些真的自己想记下来的东西，也希望可以尽量精简的写 组件用法需要注册才能使用组件，注册分为局部注册和全局注册，代码示例如下： 必须在实例注册，组件才可以使用123456789101112//全局注册Vue.component(&amp;quot;组件名&amp;quot;,&amp;#123;    //选项    &amp;#125;);//局部">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue学习笔记(一)————基础知识">
-<meta property="og:url" content="http://yoursite.com/2018/02/06/vue学习笔记-基础知识/index.html">
+<meta property="og:title" content="vue学习笔记(二)————组件">
+<meta property="og:url" content="http://yoursite.com/2018/02/11/vue学习笔记-组件 /index.html">
 <meta property="og:site_name" content="lizehong">
-<meta property="og:description" content="前言学习vue的笔记，应该会试着写一个系列，目的还是加深印象，毕竟感觉自己的记忆力真的不ok,也是给自己的学习留下一点东西 创建vue实例和数据12345678var app = new Vue(&amp;#123;	el:&amp;apos;#app&amp;apos;，//指定挂载vue实例的元素，一般为id	data:&amp;#123;		//数据		a:1	&amp;#125;	&amp;#125;) 在html中使用来显示数据， 是">
-<meta property="og:updated_time" content="2018-02-06T14:31:37.405Z">
+<meta property="og:description" content="前言主要是有关vue组件的笔记，然后也不想为了定blog而写blog,所以应该会写一些真的自己想记下来的东西，也希望可以尽量精简的写 组件用法需要注册才能使用组件，注册分为局部注册和全局注册，代码示例如下： 必须在实例注册，组件才可以使用123456789101112//全局注册Vue.component(&amp;quot;组件名&amp;quot;,&amp;#123;    //选项    &amp;#125;);//局部">
+<meta property="og:updated_time" content="2018-02-10T16:20:16.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue学习笔记(一)————基础知识">
-<meta name="twitter:description" content="前言学习vue的笔记，应该会试着写一个系列，目的还是加深印象，毕竟感觉自己的记忆力真的不ok,也是给自己的学习留下一点东西 创建vue实例和数据12345678var app = new Vue(&amp;#123;	el:&amp;apos;#app&amp;apos;，//指定挂载vue实例的元素，一般为id	data:&amp;#123;		//数据		a:1	&amp;#125;	&amp;#125;) 在html中使用来显示数据， 是">
+<meta name="twitter:title" content="vue学习笔记(二)————组件">
+<meta name="twitter:description" content="前言主要是有关vue组件的笔记，然后也不想为了定blog而写blog,所以应该会写一些真的自己想记下来的东西，也希望可以尽量精简的写 组件用法需要注册才能使用组件，注册分为局部注册和全局注册，代码示例如下： 必须在实例注册，组件才可以使用123456789101112//全局注册Vue.component(&amp;quot;组件名&amp;quot;,&amp;#123;    //选项    &amp;#125;);//局部">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/06/vue学习笔记-基础知识/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/11/vue学习笔记-组件 /"/>
 
 
 
 
 
-  <title>vue学习笔记(一)————基础知识 | lizehong</title>
+  <title>vue学习笔记(二)————组件 | lizehong</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -321,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/06/vue学习笔记-基础知识/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/vue学习笔记-组件 /">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lizehong">
@@ -342,7 +342,7 @@
             
             
               
-                vue学习笔记(一)————基础知识
+                vue学习笔记(二)————组件
               
             
           </h1>
@@ -357,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-06T17:56:58+08:00">
-                2018-02-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T00:20:35+08:00">
+                2018-02-11
               </time>
             
 
@@ -397,7 +397,7 @@
 
           
           
-             <span id="/2018/02/06/vue学习笔记-基础知识/" class="leancloud_visitors" data-flag-title="vue学习笔记(一)————基础知识">
+             <span id="/2018/02/11/vue学习笔记-组件 /" class="leancloud_visitors" data-flag-title="vue学习笔记(二)————组件">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,36 +425,27 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>学习vue的笔记，应该会试着写一个系列，目的还是加深印象，毕竟感觉自己的记忆力真的不ok,也是给自己的学习留下一点东西</p>
-<h1 id="创建vue实例和数据"><a href="#创建vue实例和数据" class="headerlink" title="创建vue实例和数据"></a>创建vue实例和数据</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var app = new Vue(&#123;</div><div class="line">	el:&apos;#app&apos;，//指定挂载vue实例的元素，一般为id</div><div class="line">	data:&#123;</div><div class="line">		//数据</div><div class="line">		a:1</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
-<p>在html中使用来显示数据， <strong>是双向绑定的</strong> </p>
-<h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><p>vue常用的生命周期钩子为</p>
-<pre><code>语法      |  简介 
-</code></pre><p>———     |  ————<br>created       | 实例创建完成后调用<br>mounted        | el挂载到实例上后调用<br>beforeDestroy  | 实例销毁之前调用</p>
-<p>用法示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ar app = new Vue(&#123;</div><div class="line">	el:&apos;#app&apos;，//指定挂载vue实例的元素，一般为id</div><div class="line">	data:&#123;</div><div class="line">		//数据</div><div class="line">		a:1</div><div class="line">	&#125;</div><div class="line">	created: function()&#123;</div><div class="line">		//函数</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#125;)</div></pre></td></tr></table></figure></p>
-<h1 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h1><p> 过滤器应该写在filters中,主要对数据进行过滤，如格式化文本，字母全部大写</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">ar app = new Vue(&#123;</div><div class="line">	el:&apos;#app&apos;,</div><div class="line">	data:&#123;</div><div class="line">	&#125;</div><div class="line">	filters:&#123;</div><div class="line">		b: function ()&#123;</div><div class="line">			//函数</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
-<p>html中写法为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;a|b&#125;&#125;</div></pre></td></tr></table></figure>
-<p><strong>过滤器也可以串联接收数据</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;a|b|c&#125;&#125;</div></pre></td></tr></table></figure>
-<p>#计算属性<br>计算属性应该写在computed中，应用在过长的逻辑运算<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;d&#125;&#125;</div><div class="line"></div><div class="line">ar app = new Vue(&#123;</div><div class="line">	....</div><div class="line">	computed:</div><div class="line">	d:function()&#123;</div><div class="line">		return //返回结果</div><div class="line">	&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure></p>
-<p><strong>注意:</strong></p>
-<ol>
-<li>计算属性不仅可以依赖当前Vue实例的数据，也可以依赖其它实例的数据</li>
-<li>计算属性是基于它的依赖缓存的，只要数据不改变，计算属性不更新</li>
-</ol>
-<h1 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h1><h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><p>动态更新HTML元素上的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line">ar app = new Vue(&#123;</div><div class="line">	...</div><div class="line">	data:&#123;</div><div class="line">		url:...</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#125;)</div></pre></td></tr></table></figure></p>
-<p>语法糖为： 如 <strong>：href=”url”</strong></p>
-<h2 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h2><p>绑定事件监听器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;button v-on:click=&quot;a&quot;&gt;&lt;/button&gt;</div><div class="line"></div><div class="line">ar app = new Vue(&#123;</div><div class="line">	....</div><div class="line">	methods:&#123;</div><div class="line">		a: function()&#123;</div><div class="line">			//函数</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">		&#125;)</div></pre></td></tr></table></figure></p>
-<p>在供click调用的方法，可以不加括号，可用$event访问原生DON事件，如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">v-on:click=&quot;a(mes,$event)&quot;</div></pre></td></tr></table></figure></p>
-<p>语法糖为@ 如 <strong>@click=”a”</strong><br>在vue中提供修饰符来实现各种事件方法的绑定，其中包括</p>
-<pre><code>语法      |  简介 
-</code></pre><p>———     |  —————-<br>@click.stop   | 阻止事件冒泡<br>@click.prevent| 提交事件不再重载页面<br>@click.once   | 只触发一次<br>@keyup.13     | 监听键盘事件，键值为13</p>
-<p>其中@keyup还提供其它键值的快捷名称，可在vue文档查找，<strong>如@keyup.down</strong></p>
-<h2 id="其它指令"><a href="#其它指令" class="headerlink" title="其它指令"></a>其它指令</h2><pre><code>语法      |  简介 
-</code></pre><p>———    |  —————-<br>v-html                  | 输出html<br>v-cloak                 | 在vue实例结束编译时从绑定的HTML元素上移除<br>v-once                  | 定义它的元素或组件只渲染一次<br>v-if  v-eles-if v-else  | 与if等相同，后加判断式<br>v-show                  | 改变元素的CSS属性display，false时会隐藏<br>v-for                   |与for类似，与in搭配使用</p>
-
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主要是有关vue组件的笔记，然后也不想为了定blog而写blog,所以应该会写一些真的自己想记下来的东西，也希望可以尽量精简的写</p>
+<h1 id="组件用法"><a href="#组件用法" class="headerlink" title="组件用法"></a>组件用法</h1><p>需要注册才能使用组件，注册分为局部注册和全局注册，代码示例如下：</p>
+<p><strong>必须在实例注册，组件才可以使用</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//全局注册</div><div class="line">Vue.component(&quot;组件名&quot;,&#123;</div><div class="line"></div><div class="line">    //选项</div><div class="line">    </div><div class="line">&#125;);</div><div class="line">//局部注册</div><div class="line">var 组件名 =&#123;</div><div class="line">    //选项</div><div class="line">&#125;</div><div class="line">html模板如下：</div><div class="line">&lt;组件名&gt;&lt;/组件名</div></pre></td></tr></table></figure></p>
+<h1 id="组件选项"><a href="#组件选项" class="headerlink" title="组件选项"></a>组件选项</h1><h2 id="template"><a href="#template" class="headerlink" title="template"></a>template</h2><p>temlplate后面是要渲染的内容，必须有一个元素包围它，代码如下：</p>
+<p><strong>注意v-show不能用在template中，可以使用v-if</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Vue.component(&quot;组件名&quot;,&#123;</div><div class="line">template: &apos;&lt;div&gt;&lt;/div&gt;&apos;;</div><div class="line">    </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><p>data的用法与实方法相同，不同的是要将数据return出去，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Vue.component(&quot;组件名&quot;,&#123;</div><div class="line">.....</div><div class="line">data : function&#123;</div><div class="line">    return  &#123;</div><div class="line">        mws: &quot;text&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">    </div><div class="line">    </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="props"><a href="#props" class="headerlink" title="props"></a>props</h2><p>props主要是用来接收来自父组件的数据，可以是字符串数组和对象<br><strong>注意数据是单向的，只能父组件传到子组件</strong><br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">html:</div><div class="line"></div><div class="line">&lt;mytext message=&quot;text&quot;&gt;&lt;/mytext&gt;</div><div class="line"></div><div class="line">js：</div><div class="line">Vue.component(&quot;mytext&quot;,&#123;</div><div class="line">    props:[&apos;message&apos;]</div><div class="line">    </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>props的数据可以进行验证，代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">props: &#123;</div><div class="line">    message : &#123;</div><div class="line">        type:Number， //类型</div><div class="line">        default:&quot;&quot;text //如果没有定义的默认值</div><div class="line">        </div><div class="line">    &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="wath"><a href="#wath" class="headerlink" title="wath"></a>wath</h2><p> 主要是用来监听props的值的改变，从而通知父组件或者更新props值<br> 代码如下<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">watch:&#123;</div><div class="line">    message: function(val)&#123;</div><div class="line">        //当message发生改变时触发的函数 </div><div class="line">        //val 为更新后的message值</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h1><h2 id="父组件向子组件通信"><a href="#父组件向子组件通信" class="headerlink" title="父组件向子组件通信"></a>父组件向子组件通信</h2><p>使用上面的props即可</p>
+<h2 id="子组件向父组件通信"><a href="#子组件向父组件通信" class="headerlink" title="子组件向父组件通信"></a>子组件向父组件通信</h2><p>使用自定义事件，子组件用$emit()来触发向父组件通信的事件代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">html:</div><div class="line">&lt;mytext @send=&quot;handle&quot;&gt;&lt;/mytext&gt;</div><div class="line">//其中send为子组件发送过来的参数，为自定义事件的名称</div><div class="line">Vue.component(&quot;mytext&quot;,&#123;</div><div class="line">template:&apos;&lt;button @click=&quot;hadles&quot;&gt;&apos;,</div><div class="line">methods:&#123;</div><div class="line">    hadles: function()&#123;</div><div class="line">        this.$emit(&apos;handle&apos;,数据);</div><div class="line">        //第一个参数为事件名称，第二个为发送的数据</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">    </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p><em>可以使用v-model来简化，不过个人感觉没有必要，所以不想写在这里做总结。。。。。。</em></p>
+<h2 id="非父子组件通信"><a href="#非父子组件通信" class="headerlink" title="非父子组件通信"></a>非父子组件通信</h2><p>在vue.js2.x中使用一个空的vu实例来作中介，组件把自定义事件名称和数据发送到这个空实例，其它实例或组件通过监听空实例的自定义事件来刷新数据<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var bus =new Vue();</div><div class="line">bus.$emit(&apos;clicks&apos;,mes);</div><div class="line">bus.$on(&apos;clicks&apos;,function()&#123;&#125;);</div></pre></td></tr></table></figure></p>
+<p>补充：<br>当子组件较多时，可以用ref属性为组件指定一个索引名称：代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">html代码如下：</div><div class="line">&lt;mytext ref=&quot;A&gt;&lt;/mytext&gt;</div><div class="line">//调用指定的子组件的message</div><div class="line">var msg=this.$refs.comA.message</div></pre></td></tr></table></figure></p>
+<h1 id="slot"><a href="#slot" class="headerlink" title="slot"></a>slot</h1><p>slot是内容分发，用在将父组件的dom结构挂载，它与props,events触发事件构成组件的3个APi来源.<br><strong>slot的作用域是在父组件上</strong><br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;mytext&gt;</div><div class="line">&lt;p&gt;&lt;/p&gt;//挂载内容 </div><div class="line">&lt;/mytext&gt;</div><div class="line">Vue.component(&quot;mytext&quot;,&#123;</div><div class="line">template:&apos;</div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;slot&gt;</div><div class="line">    &lt;p&gt;&lt;/p&gt;//没有内容时的默认内容</div><div class="line">    &lt;/slot&gt;//父组件的内容将挂载在slot里面</div><div class="line">    &lt;/div&gt;</div><div class="line">&apos;</div><div class="line">    </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>可以给slot指定一个name，使用分发指定内容代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;mytext&gt;</div><div class="line">&lt;p slot=&quot;one&quot;&gt;&lt;/p&gt;//挂载内容,slot为具名slot</div><div class="line">&lt;/mytext&gt;</div><div class="line">Vue.component(&quot;mytext&quot;,&#123;</div><div class="line">template:&apos;</div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;slot&gt;</div><div class="line">    &lt;p&gt;&lt;/p&gt;//没有内容时的默认内容</div><div class="line">    &lt;/slot&gt;//父组件的内容将挂载在slot里面</div><div class="line">    &lt;slot name=&quot;one&quot;&gt;//具名slot将分发在这里</div><div class="line">    &lt;/div&gt;</div><div class="line">&apos;</div></pre></td></tr></table></figure></p>
+<p>也可以指定数据传递到父组件的挂载里，使用scope,代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;mytext&gt;</div><div class="line">&lt;p slot=&quot;one&quot; scope=&quot;props&quot;&gt;</div><div class="line">    &#123;&#123;props.msg&#125;&#125; //显示子组件的msg</div><div class="line">&lt;/p&gt;//挂载内容,slot为具名slot,props为临时变量</div><div class="line">&lt;/mytext&gt;</div><div class="line">Vue.component(&quot;mytext&quot;,&#123;</div><div class="line">template:&apos;</div><div class="line">    &lt;div&gt;</div><div class="line">    &lt;slot&gt;</div><div class="line">    &lt;p&gt;&lt;/p&gt;//没有内容时的默认内容</div><div class="line">    &lt;/slot&gt;//父组件的内容将挂载在slot里面</div><div class="line">    &lt;slot name=&quot;one&quot; msg=&quot;数据&quot;&gt;//具名slot将分发在这里</div><div class="line">    //msg为向父组件传递的数据</div><div class="line">    &lt;/div&gt;</div><div class="line">&apos;</div></pre></td></tr></table></figure></p>
+<p>可以使用$slots访问分发的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var header =this.$slots.one;</div></pre></td></tr></table></figure></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><pre><code>还有许多关于组件的高级用法，不过我不是大佬，等以后用到再写吧。写完收工睡觉
+</code></pre>
       
     </div>
 
@@ -496,8 +487,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/06/html5_canvas笔记/" rel="next" title="html_canvas笔记">
-                <i class="fa fa-chevron-left"></i> html_canvas笔记
+              <a href="/2018/02/06/vue学习笔记-基础知识/" rel="next" title="vue学习笔记(一)————基础知识">
+                <i class="fa fa-chevron-left"></i> vue学习笔记(一)————基础知识
               </a>
             
           </div>
@@ -505,10 +496,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/11/vue学习笔记-组件 /" rel="prev" title="vue学习笔记(二)————组件">
-                vue学习笔记(二)————组件 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -650,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建vue实例和数据"><span class="nav-number">2.</span> <span class="nav-text">创建vue实例和数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生命周期"><span class="nav-number">3.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过滤器"><span class="nav-number">4.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本指令"><span class="nav-number">5.</span> <span class="nav-text">基本指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#v-bind"><span class="nav-number">5.1.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-on"><span class="nav-number">5.2.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它指令"><span class="nav-number">5.3.</span> <span class="nav-text">其它指令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件用法"><span class="nav-number">2.</span> <span class="nav-text">组件用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件选项"><span class="nav-number">3.</span> <span class="nav-text">组件选项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#template"><span class="nav-number">3.1.</span> <span class="nav-text">template</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data"><span class="nav-number">3.2.</span> <span class="nav-text">data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#props"><span class="nav-number">3.3.</span> <span class="nav-text">props</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wath"><span class="nav-number">3.4.</span> <span class="nav-text">wath</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件通信"><span class="nav-number">4.</span> <span class="nav-text">组件通信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父组件向子组件通信"><span class="nav-number">4.1.</span> <span class="nav-text">父组件向子组件通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子组件向父组件通信"><span class="nav-number">4.2.</span> <span class="nav-text">子组件向父组件通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非父子组件通信"><span class="nav-number">4.3.</span> <span class="nav-text">非父子组件通信</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slot"><span class="nav-number">5.</span> <span class="nav-text">slot</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
